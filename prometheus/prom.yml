@@ -5,6 +5,11 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
+      
+  - job_name: 'tamyrym-backend'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['invigorating-flexibility.railway.internal:8080']
 
   # - job_name: 'example_api'
   #   scheme: http
